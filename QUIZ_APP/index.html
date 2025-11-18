@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz app</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Figtree:wght@300..900&family=Fredoka:wdth,wght@100.4,500&family=Momo+Signature&family=Nanum+Gothic+Coding:wght@400;700&family=Playwrite+HU&family=Rubik:ital@1&family=Smooch+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .hidden {
+        display: none;
+      }
+      .correct {
+        background-color: rgb(25, 232, 59);
+      }
+      .incorrect {
+        background-color: rgb(116, 0, 0);
+      }
+    </style>
+  </head>
+  <body
+    class="p-0 m-0 h-screen bg-linear-to-t from-blue-950 via-violet-800 to-blue-950 flex justify-center items-center"
+  >
+    <div
+      class="w-100 bg-blue-900 pb-15 pl-5 pr-5 flex items-center flex-col rounded-lg border border-white/30 shadow-lg shadow-white/30 justify-start"
+    >
+      <h1
+        class="text-white font-['Nanum_Gothic_Coding'] text-5xl m-7 font-bold"
+      >
+        QUIZ APP
+      </h1>
+      <button
+        class="bg-blue-950 p-2 rounded-xl cursor-pointer text-white border-white border hover:scale-110 hover:translate-y-1 transition-all ease-out duration-150 hover:bg-blue-600"
+        id="start-btn"
+      >
+        Start Quiz
+      </button>
+      <div id="question-box" class="hidden">
+        <div class="flex flex-col gap-2 items-center">
+          <p
+            id="question-display"
+            class="font-bold text-xl mb-2 text-white"
+          ></p>
+          <ul id="options"></ul>
+          <button
+            class="bg-blue-950 p-2 w-30 rounded-xl cursor-pointer text-white border-white border hover:scale-110 hover:translate-y-1 transition-all ease-out duration-150 hover:bg-blue-600 hidden"
+            id="next-btn"
+          >
+            Next question
+          </button>
+        </div>
+      </div>
+      <div id="result-box" class="hidden">
+        <div class="flex flex-col items-center">
+          <p id="finalscore" class="text-white text-3xl mb-10 text-center"></p>
+          <button
+            id="restart-btn"
+            class="bg-blue-950 p-2 w-30 rounded-xl cursor-pointer text-white border-white border hover:scale-110 hover:translate-y-1 transition-all ease-out duration-150 hover:bg-blue-600"
+          >
+            Restart Quiz
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

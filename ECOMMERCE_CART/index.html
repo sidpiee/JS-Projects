@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E commerce cart</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Figtree:wght@300..900&family=Fredoka:wdth,wght@100.4,500&family=Momo+Signature&family=Rubik:ital@1&family=Smooch+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0 bg-slate-200/50 h-screen">
+    <div class="flex justify-center items-center">
+      <h1 class="text-8xl font-['Rubik']">Ecommerce Cart</h1>
+      <img
+        src="https://www.pngplay.com/wp-content/uploads/1/Shopping-Cart-PNG-Royalty-Free-Photo.png"
+        alt=""
+        class="size-40"
+      />
+    </div>
+    <div class="w-350 h-px bg-slate-700/30 flex mt-10"></div>
+    <h1 class="text-6xl font-['Barlow_Condensed'] m-5 mb-10">
+      Featured Products
+    </h1>
+
+    <div id="Products-list" class="grid grid-cols-3 gap-5 m-20"></div>
+    <div class="w-350 h-px bg-slate-700/30 flex mt-10"></div>
+    <h1 class="text-6xl font-['Barlow_Condensed'] m-5 mb-15">Shopping Cart</h1>
+    <div id="cart-items"></div>
+    <p id="empty-cart" class="mt-15 ml-5 text-4xl font-['figtree'] p-10">
+      Your cart is empty.
+    </p>
+
+    <div id="cart-total" class="hidden mt-20">
+      <div class="ml-8 flex w-150 justify-between">
+        <p class="font-['Smooch_Sans'] text-5xl">
+          Total : <span id="total-price"></span>
+        </p>
+        <button
+          id="checkout-btn"
+          class="border-black bg-none border p-3 rounded-lg hover:bg-neutral-800 hover:text-white transition ease-in-out duration-150 cursor-pointer mb-10 hover:scale-110"
+        >
+          Checkout
+        </button>
+      </div>
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Figtree:wght@300..900&family=Fredoka:wdth,wght@100.4,500&family=Momo+Signature&family=Playwrite+HU&family=Rubik:ital@1&family=Smooch+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body
+    class="p-0 m-0 h-screen bg-linear-to-br from-blue-300/60 via-blue-400 to-blue-500 flex justify-center items-center"
+  >
+    <div
+      class="w-130 bg-linear-to-bl max-h-[90vh] overflow-y-auto from-blue-100/70 via-white/20 to-blue-100/70 backdrop-blur-3xl border border-white/20 rounded-xl p-5 flex items-center shadow-2xl flex-col gap-10"
+    >
+      <h1
+        class="text-5xl text-white font-[Playwrite_HU] font-semibold shadow-2xl rounded-2xl mb-5"
+      >
+        Expe<span class="text-sky-500">nse Tra</span>cker
+      </h1>
+      <form
+        action=""
+        id="expense-form"
+        class="flex flex-col items-center gap-10"
+      >
+        <div class="flex gap-10 justify-between">
+          <input
+            type="text"
+            id="expense-name"
+            placeholder="Expense Name..."
+            required
+            class="bg-linear-to-r from-indigo-400 to-blue-400 w-50 p-2 rounded-md shadow-md shadow-black/40 border-sky-900 border focus:outline-none focus:scale-105 transition-all ease-in-out duration-150 text-indigo-700"
+            autocomplete="off"
+          />
+          <input
+            type="number"
+            id="expense-amount"
+            placeholder="Amount..."
+            required
+            class="bg-linear-to-r from-indigo-400 to-blue-400 w-50 p-2 rounded-md shadow-md shadow-black/40 border-sky-900 border focus:outline-none focus:scale-105 transition-all ease-in-out duration-150 text-indigo-700"
+            autocomplete="off"
+          />
+        </div>
+        <div class="flex justify-center">
+          <button
+            type="submit"
+            class="cursor-pointer bg-linear-to-br from-indigo-300 via-blue-400 to-cyan-500 rounded-md p-1 w-26 border border-white/50 hover:scale-110 transition-all ease-in-out duration-175 hover:translate-y-1 hover:from-blue-900 hover:to-indigo-900 shadow-sm shadow-black/50 text-white hover:text-black"
+          >
+            Add Expense
+          </button>
+        </div>
+      </form>
+      <h1
+        class="text-4xl text-white font-[Playwrite_HU] font-semibold shadow-2xl rounded-2xl mb-5 hidden"
+        id="expense-word"
+        ;
+      >
+        <span class="text-sky-500">Ex</span>pen
+        <span class="text-sky-500">ses</span>
+      </h1>
+      <ul id="expense-list" class=""></ul>
+      <div id="total-box" class="hidden">
+        <h1
+          class="text-4xl text-white font-[Playwrite_HU] font-semibold shadow-2xl rounded-2xl m-10"
+        >
+          T<span class="text-sky-500">o</span>t<span class="text-sky-500"
+            >a</span
+          >l
+        </h1>
+        <div class="w-full h-px bg-sky-700"></div>
+        <h1
+          id="total"
+          class="text-4xl text-white font-[Playwrite_HU] font-semibold m-2 text-center"
+        >
+          $ 0.00
+        </h1>
+        <div class="w-full h-px bg-sky-700"></div>
+      </div>
+    </div>
+    <script src="./script2.js" defer></script>
+  </body>
+</html>
